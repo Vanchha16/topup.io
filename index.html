@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <!-- CSRF Token -->
+        <meta
+            name="csrf-token"
+            content="cF4OlNWZYW3wFNVTco4KUVbAqpxB3e20E2l37JlC"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- MDB -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+            rel="stylesheet"
+        />
+        <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/logo.css" />
+        <title>Chha Topup</title>
+        <link rel="icon" type="image/x-icon" href="" />
+
+        <style>
+            .swiper {
+                width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 769px) {
+                .swiper {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 479px) {
+                .swiper {
+                    height: auto;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1023px) {
+                .swiper {
+                    height: auto;
+                }
+            }
+
+            @media (min-width: 1024px) and (max-width: 1279px) {
+                .swiper {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            @media (min-width: 1280px) {
+                .swiper {
+                    height: auto;
+                }
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form
+            method="POST"
+            target="aba_webservice"
+            action=""
+            id="aba_merchant_request"
+        >
+            <input type="hidden" name="req_time" />
+            <input type="hidden" name="merchant_id" />
+            <input type="hidden" name="tran_id" />
+            <input type="hidden" name="amount" />
+            <input type="hidden" name="items" />
+            <input type="hidden" name="firstname" />
+            <input type="hidden" name="lastname" />
+            <input type="hidden" name="payment_option" />
+            <input type="hidden" name="hash" />
+            <input type="hidden" name="return_url" />
+            <input type="hidden" name="continue_success_url" />
+        </form>
+        <header>
+            <nav class="navbar navbar-expand-lg our-navbar">
+                <!-- Container wrapper -->
+                <div class="container">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand me-2" href="">
+                        <img
+                            src="./assets/img/865dce9a-b888-4439-a5ac-64e4f3c479e3.png"
+                            alt="Logo Sites"
+                            loading="lazy"
+                            class="logo"
+                        />
+                    </a>
+
+                    <!-- Toggle button -->
+
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                    <!-- Left links -->
+
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+        </header>
+
+        <style>
+            .wpr_payment_option .item .item-dec span {
+                line-height: 12px;
+                font-family: sans-serif;
+                color: #000;
+            }
+
+            .wpr_payment_option .item .item-dec .title {
+                font-weight: 700;
+                font-size: 16px;
+                font-family: sans-serif;
+                color: #101743;
+            }
+
+            .wpr_payment_option .item .item-dec .description {
+                font-size: 14px;
+                font-family: sans-serif;
+                color: #b26fcb;
+            }
+
+            /* products Modify */
+            .card-custom {
+                background-color: #f3a109;
+                border-radius: 10px;
+                padding: 1px;
+                margin-bottom: 12px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+                border-color: #ff94a9;
+            }
+            .products button {
+                border: 1px solid #fcbad6;
+            }
+
+            .btn-1 {
+                background-color: #e5ff00;
+                color: #fff;
+            }
+
+            .card {
+                background-color: var(--card-color);
+                border: 1px solid var(--card-border);
+            }
+
+            .DM-C {
+                width: 50px;
+                height: auto;
+            }
+
+            .price {
+                font-size: 19px;
+                font-family: "Righteous", serif;
+                font-weight: bold;
+                color: #d4a158;
+            }
+
+            .badge-off {
+                background-color: #f44336;
+                /* Red color */
+                color: white;
+                border-radius: 3px;
+                text-align: start;
+                white-space: nowrap;
+                font-size: 0.6rem;
+                padding: 0.1rem 0.3rem;
+                position: absolute;
+                top: -10px;
+                right: auto;
+                z-index: 1;
+            }
+
+            .title_price {
+                font-size: 19px;
+                font-weight: bold;
+                color: #fff;
+                float: right;
+                margin-right: 0.5rem;
+                /* Gold color for price */
+            }
+
+            .title_dm {
+                font-size: 15px;
+                float: right;
+                margin-right: 0.5rem;
+            }
+
+            @media (max-width: 767px) {
+                .wpr_payment_option .item .item-dec .description {
+                    font-size: 11px;
+                }
+
+                .title_dm {
+                    font-size: 11px;
+                }
+            }
+        </style>
+        <main role="main">
+            <div class="container mt-0 pt-0 p-2">
+                <section id="content" class="my-2" style="margin: 0">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/img/Artboard 1.png"
+                                            class="w-full h-full"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+                            <div class="d-flex gap-1 my-2">
+                                <img src="./assets/img/art.png" width="100%" />
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <div class="col-md-12 mb-4">
+                                <div class="card px-2 py-4 pt-3" id="box-user">
+                                    <p
+                                        class="text-white bg-method fw-bold d-flex gap-1"
+                                    >
+                                        <span class="badge">1</span> បញ្ចូល
+                                        អាយឌី
+                                    </p>
+
+                                    <form action="#" class="user_game_form">
+                                        <div
+                                            class="d-flex flex-column flex-sm-row gap-3"
+                                        >
+                                            <input
+                                                placeholder="User ID"
+                                                autocomplete="on"
+                                                type="number"
+                                                name="user_id"
+                                                value=""
+                                                id="user_id"
+                                                class="form-control flex-fill"
+                                            />
+
+                                            <input
+                                                autocomplete="on"
+                                                placeholder="Server ID"
+                                                type="number"
+                                                name="server_id"
+                                                value=""
+                                                id="server_id"
+                                                class="form-control flex-fill"
+                                            />
+
+                                            <a
+                                                class="btn btn-1"
+                                                style="min-width: 150px"
+                                                onclick="fetchUser()"
+                                                >ពិនិត្យ ឈ្មោះ</a
+                                            >
+                                        </div>
+                                    </form>
+
+                                    <span
+                                        class="fw-bold pt-1"
+                                        id="user_found"
+                                    ></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 position-relative">
+                                    <div class="card" id="box-item">
+                                        <div class="card-body p-2 pb-0">
+                                            <p
+                                                class="text-white bg-method fw-bold d-flex gap-1"
+                                            >
+                                                <span class="badge">2</span
+                                                >ជ្រើសរើសកញ្ចប់ ពេជ្រ
+                                            </p>
+                                        </div>
+                                        <div class="card-body p-2 pt-0">
+                                            <div class="row mb-1 products">
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-6"
+                                                        onclick='selectProduct(6, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/weekly.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $1.33
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                Weekly Pass
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-7"
+                                                        onclick='selectProduct(7, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/weekly.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $2.69
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                Weekly X2
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-8"
+                                                        onclick='selectProduct(8, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+                                                        <!-- <div class="badge-off">
+                                                            
+                                                        </div> -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/weekly.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $3.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                Weekly X3
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-9"
+                                                        onclick='selectProduct(9, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+                                                        <!-- <div class="badge-off">
+                                                            Diss 10%
+                                                        </div> -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/weekly.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $6.69
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                Weekly X5
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-40"
+                                                        onclick='selectProduct(40, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $0.25
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                11 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-42"
+                                                        onclick='selectProduct(42, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $0.79
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                55 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-10"
+                                                        onclick='selectProduct(10, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+                                                        <!-- <div class="badge-off">
+                                                            Diss 10%
+                                                        </div> -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $1.15
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                86 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-43"
+                                                        onclick='selectProduct(43, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $2.15
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                165 Diamond
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-11"
+                                                        onclick='selectProduct(11, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+                                                        <!-- <div class="badge-off">
+                                                            Off 10%
+                                                        </div> -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $2.19
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                172 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-12"
+                                                        onclick='selectProduct(12, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $3.19
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                257 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-41"
+                                                        onclick='selectProduct(41, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+                                                        <!-- <div class="badge-off">
+                                                            Full Ticket
+                                                        </div> -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $3.39
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                275 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-13"
+                                                        onclick='selectProduct(13, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $4.29
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                343 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-14"
+                                                        onclick='selectProduct(14, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $5.35
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                429 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-15"
+                                                        onclick='selectProduct(15, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $6.79
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                565 Diamond
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-16"
+                                                        onclick='selectProduct(16, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $8.49
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                706 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-17"
+                                                        onclick='selectProduct(17, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $10.79
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                878 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-18"
+                                                        onclick='selectProduct(18, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $12.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                1049 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-19"
+                                                        onclick='selectProduct(19, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $14.09
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                1135 Diamond
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-20"
+                                                        onclick='selectProduct(20, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $16.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                1412 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-21"
+                                                        onclick='selectProduct(21, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $25.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                2195 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-22"
+                                                        onclick='selectProduct(22, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $42.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                3688 Diamond
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-23"
+                                                        onclick='selectProduct(23, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $64.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                5532 Diamond
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-24"
+                                                        onclick='selectProduct(24, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $89.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                7727 Diamonds
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div
+                                                    class="col-6 col-lg-3 col-sm-6 col-md-3 text-center product"
+                                                >
+                                                    <button
+                                                        class="card-custom w-100"
+                                                        id="item-bundle-25"
+                                                        onclick='selectProduct(25, "bundle")'
+                                                    >
+                                                        <!-- Discount Badge -->
+
+                                                        <!-- Item Image -->
+
+                                                        <img
+                                                            src="./assets/img/diamond.png"
+                                                            alt="Diamonds Bag"
+                                                            class="img-fluid DM-C"
+                                                        />
+
+                                                        <!-- Price and Description -->
+                                                        <div class="ms-1">
+                                                            <div
+                                                                class="title_price"
+                                                            >
+                                                                $109.99
+                                                            </div>
+                                                            <div
+                                                                class="title_dm"
+                                                            >
+                                                                9288 Diamond
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+
+                                                <input
+                                                    type="hidden"
+                                                    name="product_type"
+                                                    id="product_type"
+                                                    class="form-control"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row my-3 w-full">
+                                <div class="col-md-12">
+                                    <div class="card" id="box-payment_option">
+                                        <div class="card-body p-2 w-full">
+                                            <p
+                                                class="text-white bg-method fw-bold d-flex gap-1"
+                                            >
+                                                <span class="badge">3</span
+                                                >ទូទាត់ប្រាក់បានគ្រប់ធនាគារ
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="container px-0"
+                                            style="margin-top: -30px"
+                                        >
+                                            <div class="wpr_payment_option">
+                                                <label
+                                                    for="payment_option"
+                                                    class="item"
+                                                >
+                                                    <div class="item-input">
+                                                        <input
+                                                            type="radio"
+                                                            name="payment_option"
+                                                            class="payment_option_radio"
+                                                            checked
+                                                            value="abapay_khqr"
+                                                        />
+                                                        <img
+                                                            class="cardType"
+                                                            width="50"
+                                                            src="https://sakuratopup.com/assets/images/KHQR.svg"
+                                                        />
+                                                    </div>
+                                                    <div class="item-dec">
+                                                        <span
+                                                            class="title text-white"
+                                                            >ABA KHQR</span
+                                                        >
+                                                        <span
+                                                            class="description text-white"
+                                                            >Scan to pay with
+                                                            any banking
+                                                            app</span
+                                                        >
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                            <div class="wpr_t_c">
+                                                <div class="form-check">
+                                                    <input
+                                                        onchange="check()"
+                                                        type="checkbox"
+                                                        :checked
+                                                        class="form-check-input"
+                                                        id="check_btn"
+                                                        checked
+                                                    />
+                                                    <label
+                                                        class="form-check-label text-white"
+                                                        for="check_btn"
+                                                    >
+                                                        I agree
+                                                        <a
+                                                            class="text-warning"
+                                                            href="https://sakuratopup.com/terms"
+                                                            >TERMS AND
+                                                            CONDITIONS
+                                                        </a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="sticky-payment hidden lg:d-block hidden-mobile"
+                                style="margin-top: -21px"
+                            >
+                                <div class="d-none d-lg-block">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="row">
+                                            <span class="text-secondary">
+                                                <span id="product_name"></span>
+                                            </span>
+                                            <div class="text-dark">
+                                                <span
+                                                    ><strong
+                                                        >សរុប :
+                                                        <span class="price"
+                                                            >0.00$</span
+                                                        ></strong
+                                                    ></span
+                                                >
+                                            </div>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            class="btn-submit border-0 bg-white"
+                                            id="checkout_button"
+                                            onclick="createPreOrder()"
+                                        >
+                                            <span
+                                                class="btn btn-1"
+                                                style="min-width: 150px"
+                                                ><strong>បង់ ឥឡូវ</strong></span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="sticky-payment-sm hidden sm:d-block"
+                            style="margin-top: -1px"
+                        >
+                            <div
+                                class="d-flex justify-content-between d-lg-none d-sm-block"
+                            >
+                                <div class="row">
+                                    <span class="text-secondary">
+                                        <span id="product_name"></span>
+                                    </span>
+                                    <div class="text-dark">
+                                        <span
+                                            ><strong
+                                                >សរុប :
+                                                <span class="price"
+                                                    >0.00$</span
+                                                ></strong
+                                            ></span
+                                        >
+                                    </div>
+                                </div>
+                                <button
+                                    type="button"
+                                    class="btn-submit border-0 bg-white"
+                                    id="checkout_button"
+                                    onclick="createPreOrder()"
+                                >
+                                    <span
+                                        class="btn btn-1"
+                                        style="min-width: 150px"
+                                        ><strong>បង់ ឥឡូវ</strong></span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+            <script
+                src="https://code.jquery.com/jquery-3.6.3.slim.js"
+                integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc="
+                crossorigin="anonymous"
+            ></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script
+                type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+            ></script>
+
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+
+            <footer>
+                <a
+                    href="https://t.me/sakuratopup168"
+                    target="blank"
+                    class="chat-button"
+                >
+                    <img
+                        src="./assets/img/Naruto Chibi.png"
+                        alt="Chat Icon"
+                        class="chat-icon"
+                    />
+                </a>
+
+                <div class="col-12 bg-white text-center cp-footer">
+                    <div
+                        class="container d-flex flex-column flex-sm-row justify-content-between p-2 align-items-center"
+                    >
+                        <div class="col-12 col-lg-4 col-md-6 col-sm-6">
+                            <div
+                                class="d-flex justify-content-center justify-content-sm-start align-items-center"
+                                style="display: flex; font-size: 14px"
+                            >
+                                SakuraTopup, All Rights Reserved.
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-center justify-content-sm-end align-items-center payment-accepted"
+                        >
+                            <span>We accepted :</span>
+                            <img
+                                src="https://sakuratopup.com/assets/images/KHQR.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .footer .sc-contact {
+                        width: 150px;
+                    }
+
+                    /* sticky chat */
+
+                    /* Sticky Chat Button Styles */
+                    .chat-button {
+                        position: fixed;
+                        bottom: 65px;
+                        right: 15px;
+                        background-color: #fff;
+                        /* Orange */
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        z-index: 1000;
+                        transition: all 0.3s ease;
+                    }
+
+                    .chat-button:hover {
+                        background-color: #ff6100;
+                        /* Darker Orange */
+                        transform: scale(1.1);
+                        /* Slightly enlarge on hover */
+                    }
+
+                    .chat-icon {
+                        margin-right: 5px;
+                        width: 80%;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+
+                    /* Animation for Chat Button */
+                    @keyframes chatBounce {
+                        0%,
+                        20%,
+                        50%,
+                        80%,
+                        100% {
+                            transform: translateY(0);
+                        }
+
+                        40% {
+                            transform: translateY(-10px);
+                        }
+
+                        60% {
+                            transform: translateY(-5px);
+                        }
+                    }
+
+                    .chat-button {
+                        animation: chatBounce 2s infinite;
+                    }
+
+                    /* Media Query for smaller screens */
+                    @media (max-width: 768px) {
+                        .chat-button {
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .chat-icon {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                </style>
+            </footer>
+        </main>
+
+        <script src="https://checkout.payway.com.kh/plugins/checkout2-0.js"></script>
+
+        <script type="text/javascript">
+            let selectProductId = null;
+            let username = null;
+            let isAccepted = true;
+            const requiredServerName = "1";
+            const game_code = "mobilelegend";
+
+            const productList = [];
+            const bundleList = {
+                0: {
+                    id: 6,
+                    name: "Weekly Pass",
+                    price: "1.33",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF4P3XPV6ED58T8WYWJZ094.png",
+                    ordering: 1,
+                },
+                1: {
+                    id: 7,
+                    name: "Weekly X2",
+                    price: "2.69",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF4RB3WC1YG67537GHG4TDW.png",
+                    ordering: 2,
+                },
+                3: {
+                    id: 8,
+                    name: "Weekly X3",
+                    price: "3.99",
+                    vendor: "merchant",
+                    discount: "Full Ticket",
+                    image: "vnst4re\/01JRF4W00MM11RGQQQFYH6MNCY.png",
+                    ordering: 3,
+                },
+                6: {
+                    id: 9,
+                    name: "Weekly X5",
+                    price: "6.69",
+                    vendor: "merchant",
+                    discount: "Diss 10%",
+                    image: "vnst4re\/01JRF4ZM6AA47WEWE1FMR76QGB.png",
+                    ordering: 4,
+                },
+                11: {
+                    id: 40,
+                    name: "11 Diamonds",
+                    price: "0.25",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRHBSH14QMGD58HV6JNSCSSZ.png",
+                    ordering: 4,
+                },
+                12: {
+                    id: 42,
+                    name: "55 Diamonds",
+                    price: "0.79",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JT0FM8M64S8YKC7AAK6JSKP7.png",
+                    ordering: 4,
+                },
+                13: {
+                    id: 10,
+                    name: "86 Diamonds",
+                    price: "1.15",
+                    vendor: "merchant",
+                    discount: "Diss 10%",
+                    image: "vnst4re\/01JRF53V9JCY23W98T1GFJQDCY.png",
+                    ordering: 5,
+                },
+                14: {
+                    id: 43,
+                    name: "165 Diamond",
+                    price: "2.15",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JT0FQVBYQGT632DYHCASPVNP.png",
+                    ordering: 5,
+                },
+                15: {
+                    id: 11,
+                    name: "172 Diamonds",
+                    price: "2.19",
+                    vendor: "merchant",
+                    discount: "Off 10%",
+                    image: "vnst4re\/01JRF57NF0ZBVKKQ56VYWMYANS.png",
+                    ordering: 6,
+                },
+                16: {
+                    id: 12,
+                    name: "257 Diamonds",
+                    price: "3.19",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF5ABZNZ8HPW5870P5GGR1E.png",
+                    ordering: 7,
+                },
+                17: {
+                    id: 41,
+                    name: "275 Diamonds",
+                    price: "3.39",
+                    vendor: "merchant",
+                    discount: "Full Ticket",
+                    image: "vnst4re\/01JS4XXW758SGA6HP24X9F8537.png",
+                    ordering: 7,
+                },
+                18: {
+                    id: 13,
+                    name: "343 Diamonds",
+                    price: "4.29",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF5EBC5PCF0TF8H6Y9HESGX.png",
+                    ordering: 8,
+                },
+                20: {
+                    id: 14,
+                    name: "429 Diamonds",
+                    price: "5.35",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF5J2634WA2YVDZZJC77WT5.png",
+                    ordering: 9,
+                },
+                22: {
+                    id: 15,
+                    name: "565 Diamond ",
+                    price: "6.79",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF5N49YWMJWJFX0SZ9J0FZ9.png",
+                    ordering: 10,
+                },
+                23: {
+                    id: 16,
+                    name: "706 Diamonds",
+                    price: "8.49",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF5RG3VDBAN6B4DB5MZM0EC.png",
+                    ordering: 11,
+                },
+                24: {
+                    id: 17,
+                    name: "878 Diamonds",
+                    price: "10.79",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF5WF9AV7ZDHA5H4JRGM9ZQ.png",
+                    ordering: 13,
+                },
+                26: {
+                    id: 18,
+                    name: "1049 Diamonds",
+                    price: "12.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF647DYTW4KEFWK22MZKM5J.png",
+                    ordering: 14,
+                },
+                29: {
+                    id: 19,
+                    name: "1135 Diamond",
+                    price: "14.09",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF6K49N2X76Y3WF3DQET8QZ.png",
+                    ordering: 15,
+                },
+                32: {
+                    id: 20,
+                    name: "1412 Diamonds",
+                    price: "16.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF6PGTVTGVQS5NM4N8T1H4Z.png",
+                    ordering: 17,
+                },
+                34: {
+                    id: 21,
+                    name: "2195 Diamonds",
+                    price: "25.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF6T3X6YPVDKJK39BJTV2DH.png",
+                    ordering: 18,
+                },
+                35: {
+                    id: 22,
+                    name: "3688 Diamond",
+                    price: "42.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF6Y9GAX4G345GJFP8X6K63.png",
+                    ordering: 19,
+                },
+                36: {
+                    id: 23,
+                    name: "5532 Diamond",
+                    price: "64.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF7231925ARECHXN7EXTST3.png",
+                    ordering: 21,
+                },
+                37: {
+                    id: 24,
+                    name: "7727 Diamonds",
+                    price: "89.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF76A7QJ2E99M2K3C2DVFAA.png",
+                    ordering: 22,
+                },
+                39: {
+                    id: 25,
+                    name: "9288 Diamond",
+                    price: "109.99",
+                    vendor: "merchant",
+                    discount: null,
+                    image: "vnst4re\/01JRF77PCATPJ05C7E68NQ0SG8.png",
+                    ordering: 23,
+                },
+            };
+
+            $.ajaxSetup({
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                        "content"
+                    ),
+                },
+            });
+
+            function check() {
+                if ($("#check_btn").is(":checked")) {
+                    $("#checkout_button").removeClass("disable");
+                    isAccepted = false;
+                } else {
+                    $("#checkout_button").addClass("disable");
+                    isAccepted = true;
+                }
+            }
+
+            function fetchUser() {
+                var user_id = $("#user_id").val();
+                var server_id = $("#server_id").val();
+
+                if (!user_id) {
+                    return;
+                }
+
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/check-user",
+                    beforeSend: function (xhr) {
+                        $("#user_found").html("កំពង់ស្វែងរក ...!").css({
+                            color: "white",
+                        });
+                    },
+                    data: {
+                        user_id,
+                        server_id,
+                        game_code,
+                    },
+                    success: function (res) {
+                        const { status, data, error_msg } = res;
+                        if (res.status === 0) {
+                            $("#user_found").html(error_msg).css({
+                                color: "red",
+                            });
+                            username = null;
+                        } else {
+                            $("#user_found").html(data.username).css({
+                                color: "#904304",
+                            });
+                            username = data.username;
+                            dataValidationClear();
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        let time = 20;
+                        let inv = setInterval(() => {
+                            $("#user_found").css({
+                                color: "black",
+                            });
+                            $("#user_found").html(
+                                "Your session has expired or invalid ID., Please reload page. (" +
+                                    time +
+                                    ")"
+                            );
+                            time = time - 1;
+                        }, 1000);
+
+                        setTimeout(() => {
+                            clearTimeout(inv);
+                            location.reload();
+                        }, 5000);
+                    },
+                });
+            }
+
+            function selectProduct(id, type = "product") {
+                let data = productList.find((i) => i.id === id);
+                if (type === "bundle") {
+                    // data = bundleList.find((i) => i.id === id);
+                    data = Object.values(bundleList).find((i) => i.id == id);
+                }
+                if (data) {
+                    selectProductId = id;
+                    const price = parseFloat(data.price);
+
+                    $(".product button").removeClass("selected");
+                    $("#item-" + type + "-" + id).addClass("selected");
+                    $(".price").text("$" + price.toFixed(2));
+                    $("#product_name").text(data.name);
+                    $("#product_type").val(type);
+                }
+            }
+
+            // function dataValidation() {
+            //     dataValidationClear();
+            //     const payment_option = $(".payment_option_radio:checked").val();
+            //     const user_id = $("#user_id").val();
+            //     const server_id = $("#server_id").val();
+            //     const player_id = $("#player_id").val();
+            //     const character_id = $("#character_id").val();
+            //     const product_type = $("#product_type").val();
+            //     const product_id = selectProductId;
+            //     console.log(player_id);
+            //     let payLoad = {
+            //         product_id,
+            //         payment_option,
+            //         product_type
+            //     };
+
+            //     if (player_id === '' || character_id === '') {
+            //         payLoad.user_id = user_id;
+            //         payLoad.server_id = server_id;
+            //     } else if(character_id === '' || user_id === '') {
+            //         payLoad.player_id = player_id;
+            //     }else{
+            //         payLoad.character_id = character_id;
+            //     }
+
+            //     for (let key in payLoad) {
+            //         console.log(key, payLoad[key]);
+            //         if (!payLoad[key]) {
+            //             $('#box-' + key).addClass('box-error')
+            //             if (['user_id', 'server_id', 'player_id', 'character_id', 'username'].includes(key)) {
+            //                 $('#box-user').addClass('box-error');
+            //             }
+            //             return false;
+            //         }
+            //     }
+
+            //     return payLoad;
+            // }
+
+            //   function dataValidation() {
+            //     dataValidationClear(); // Clear previous validation messages
+
+            //     const payment_option = $(".payment_option_radio:checked").val();
+            //     const user_id = $("#user_id").val();
+            //     const server_id = $("#server_id").val();
+            //     const player_id = $("#player_id").val();
+            //     const character_id = $("#character_id").val();
+            //     const product_type = $("#product_type").val();
+            //     const username = $("#user_found").text();
+            //     const product_id = selectProductId;
+
+            //     var payLoad = {
+            //         product_id,
+            //         payment_option,
+            //         product_type
+            //     };
+
+            //     if (player_id || character_id) {
+            //         if (player_id) {
+            //             payLoad.player_id = player_id;
+            //         }
+            //         if (character_id) {
+            //             payLoad.character_id = character_id;
+            //         }
+            //     } else {
+            //         if (user_id) {
+            //             payLoad.user_id = user_id;
+            //         }
+            //         if (server_id) {
+            //             payLoad.server_id = server_id;
+            //         }
+            //         if (username) {
+            //             payLoad.username = username;
+            //         }
+            //     }
+
+            //     for (let key in payLoad) {
+            //         console.log(key, payLoad[key]);
+
+            //         if (!payLoad[key]) {
+            //             $('#box-' + key).addClass('box-error');
+
+            //             if (['user_id', 'server_id', 'player_id', 'character_id', 'username'].includes(key)) {
+            //                 // if ($('#box-user').length) { // Ensure element exists before modifying it
+            //                     $('#box-user').addClass('box-error');
+            //                 // }
+            //             }
+
+            //             return false; // Stop execution if any required field is empty
+            //         }
+            //     }
+
+            //     return payLoad; // Return valid payload if everything is filled
+            // }
+
+            function dataValidation() {
+                dataValidationClear();
+
+                const payment_option = $(".payment_option_radio:checked").val();
+                const user_id = $("#user_id").val();
+                const server_id = $("#server_id").val();
+                const player_id = $("#player_id").val();
+                const character_id = $("#character_id").val();
+                const product_type = $("#product_type").val();
+                // const username = $("#username").val();  // Added missing username field
+                const product_id = selectProductId;
+
+                let payLoad = { product_id, payment_option, product_type };
+
+                if (!user_id) {
+                    // Fixed user_id check
+                    if (player_id) payLoad.player_id = player_id;
+                    if (character_id) payLoad.character_id = character_id;
+                } else {
+                    payLoad = {
+                        user_id,
+                        server_id,
+                        username,
+                        product_id,
+                        payment_option,
+                        product_type,
+                    };
+                }
+
+                for (let key in payLoad) {
+                    console.log(payLoad);
+
+                    if (
+                        payLoad[key] === undefined ||
+                        payLoad[key] === null ||
+                        payLoad[key] === ""
+                    ) {
+                        $("#box-" + key).addClass("box-error");
+
+                        if (
+                            [
+                                "user_id",
+                                "server_id",
+                                "player_id",
+                                "character_id",
+                                "username",
+                            ].includes(key)
+                        ) {
+                            if ($("#box-user").length) {
+                                $("#box-user").addClass("box-error");
+                            }
+                        }
+
+                        return false; // Stop execution if any required field is empty
+                    }
+                }
+
+                return payLoad;
+            }
+
+            function dataValidationClear() {
+                $(".card").removeClass("box-error");
+            }
+
+            function createPreOrder(e) {
+                if (!isAccepted) return false;
+
+                let payload = dataValidation();
+
+                if (!payload) return false;
+
+                $.ajax({
+                    url: "/aba/pre-order",
+                    method: "POST",
+                    data: JSON.stringify(payload),
+                    contentType: "application/json; charset=utf-8;",
+                    dataType: "json",
+                    success: function ({ status, data, message }) {
+                        if (status && data) {
+                            for (key in data) {
+                                $(
+                                    "#aba_merchant_request input[name=" +
+                                        key +
+                                        "]"
+                                ).val(data[key]);
+                            }
+                            $("#aba_merchant_request").attr(
+                                "action",
+                                data.apiUrl
+                            );
+                            AbaPayway.checkout();
+                        }
+                    },
+                });
+            }
+
+            //  Save localstorage
+            document.addEventListener("DOMContentLoaded", function () {
+                // Load saved values from localStorage
+                if (localStorage.getItem("user_id")) {
+                    document.getElementById("user_id").value =
+                        localStorage.getItem("user_id");
+                }
+
+                if (localStorage.getItem("player_id")) {
+                    document.getElementById("player_id").value =
+                        localStorage.getItem("player_id");
+                }
+
+                if (localStorage.getItem("server_id")) {
+                    document.getElementById("server_id").value =
+                        localStorage.getItem("server_id");
+                }
+
+                // Save input values to localStorage when the user types
+                document
+                    .getElementById("user_id")
+                    .addEventListener("input", function () {
+                        localStorage.setItem("user_id", this.value);
+                    });
+
+                document
+                    .getElementById("server_id")
+                    .addEventListener("input", function () {
+                        localStorage.setItem("server_id", this.value);
+                    });
+            });
+
+            // Clear localStorage when the form is submitted
+            function clearLocalStorageOnSubmit() {
+                localStorage.removeItem("user_id");
+                localStorage.removeItem("server_id");
+                localStorage.removeItem("player_id");
+            }
+        </script>
+    </body>
+</html>

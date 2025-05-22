@@ -1,0 +1,347 @@
+:root {
+    --primary-color: rgb(5, 78, 179);
+    --secondary-color: rgb(15, 28, 46);
+    --text-color: #904304;
+    --text-des-color: #904304;
+    --white-color: #ffffff;
+
+    --card-custom: #ffffff;
+
+    --selected-background: #f8ff2e;
+    --selected-background-p: #1500ff;
+
+    --paymentMethod-background: #ccbe01;
+    --paymentMethod-border: #979525;
+
+    --card-color: #a87b00;
+    --card-border: #fffb00;
+}
+
+.btn-custom {
+    background-color: #ff94a9;
+    color: #97ff94;
+}
+
+.btn-custom:hover {
+    opacity: 0.5;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+body {
+    background: var(--secondary-color);
+}
+
+.main-color {
+    background: var(--secondary-color);
+}
+
+.our-navbar {
+    background: var(--primary-color);
+    padding: 0px;
+    height: 55px;
+    border-bottom: 1px solid #c7c2c2;
+    /* box-shadow: 1px 1px 0.5px 0px #c7c2c2; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.our-navbar .logo {
+    height: 45px;
+    width: auto;
+}
+
+.our-navbar .btn-icon {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+}
+
+.page-title .title {
+    font-size: 18px;
+    font-family: "Righteous", serif;
+    line-height: 18px;
+    color: var(--text-color);
+}
+
+.page-title .des {
+    font-size: 12px;
+    font-family: "Righteous", serif;
+    line-height: 12px;
+    color: var(--text-des-color);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--white-color);
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-color {
+    background-color: #1c265b;
+}
+
+.product-color-header {
+    background-color: #1c265b;
+}
+
+product-line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selected {
+    background: var(--selected-background) !important;
+}
+
+.selected p {
+    color: var(--selected-background-p) !important;
+}
+
+.product button p {
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+button.disable {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}
+
+.box-error {
+    border: 3px solid red !important;
+}
+
+.wpr_payment_option {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* padding: 3px 10px 3px; */
+    padding: 10px;
+}
+
+.wpr_payment_option .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 15px;
+    /* padding: 5px 25px; */
+    padding: 20px 15px;
+    border: 1px solid #333f35;
+}
+
+.wpr_payment_option .item .item-input {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    width: 50px;
+    height: 50px;
+    background: #e2232e;
+    border-radius: 5px;
+}
+
+.wpr_payment_option .item .item-dec {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wpr_t_c {
+    padding: 10px;
+}
+
+.payment_option_radio {
+    display: none;
+    background: red;
+}
+
+.payment-receipt,
+.payment-receipt-notfound {
+    margin: 0px auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    max-width: 500px;
+    min-height: 400px;
+}
+
+.payment-receipt .footer,
+.payment-receipt .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Righteous", serif;
+    gap: 10px;
+}
+
+.btn-inv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Righteous", serif;
+    gap: 10px;
+}
+
+.payment-receipt .footer .btn {
+    background: #1500ff;
+}
+
+.payment-receipt-notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cp-footer {
+    padding: 10px;
+    justify-content: center;
+}
+
+.payment-accepted {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.payment-accepted img {
+    width: 50px;
+}
+
+.footer {
+    background: #999;
+}
+
+.product-game {
+    width: 165px !important;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.sticky-payment {
+    position: sticky;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.sticky-payment-sm {
+    position: sticky;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.products button {
+    min-height: auto;
+    padding: 1px !important;
+}
+
+.wpr_payment_option .item {
+    border: 1px solid #c7c2c2;
+    background-color: var(--paymentMethod-background);
+    border-radius: 5px;
+}
+
+.bg-method {
+    background-color: var(--paymentMethod-background);
+    padding: 0.7rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid var(--paymentMethod-border);
+}
+
+.badge {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--card-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Signal Dot */
+    /* animation: pulse 1.5s infinite ease-in-out; */
+}
+
+/* Signal Dot */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none;
+    }
+    .title_dm {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .sticky-payment-sm {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sticky-payment-sm {
+        visibility: hidden;
+    }
+}
